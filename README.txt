@@ -1,4 +1,4 @@
-# Лабораторная работа "Алгебра полиномов"
+﻿# Лабораторная работа "Алгебра полиномов"
 ____
 ## Техническое задание
 ____
@@ -421,28 +421,29 @@ ____
 
 ##### Класс «THashTable»
 Изначально вне класса была создана структура TLine, которая хранит ключ, значение, указатель на след звено и число звеньев.
-- 	string key;
+- 	std::string nameOfLine;
 -	T value;
-- 	TLine<T>* pnext;
-- 	int number_of_line;
+- 	THashLine<T>* pNextLine;
+- 	size_t numOfLine;
 
 Данные:
 
-- 	TLine<T> line[MAX_SIZE] - элемент структуры TLine;
-- 	int count - число строк
+- 	THashLine<T> line[MaxSizeOfTableH] - элемент структуры TLine;
+- 	size_t countOfLine - число строк
 
 Ниже приведены методы, реализованные в данном классе.
 
 | LEFT | LEFT |
 |---------------------------------------------|:------------------------------------------------:|
 | THashTable() | конструктор |
-| int In_Hash(string _key) | преобразование ключа в хеш-ключ | 
+| size_t Hash(string _key) | преобразование ключа в хеш-ключ | 
 | bool Is_Empty()| метод проверки на пустоту | 
 | bool Is_Full() | метод проверки на полноту |  
-| void Insert_Line(string _key, T _value) | вставка |
+| void InsertLine(string _key, T _value) | вставка |
 | int Search_In_Table_By_Name(string _key) | поиск по ключу |
-| void Delete_Line(string _key) | удаление элемента |
+| void DeleteLine(string _key) | удаление элемента |
 | void Print_Table() | вывод таблицы |
+| T  GetPolinominal() |получение данных строки |
 
 К данному классу были реализованы следующие тесты.
 
